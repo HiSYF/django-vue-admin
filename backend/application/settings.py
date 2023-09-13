@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # ================================================= #
 # ******************** 动态配置 ******************** #
 # ================================================= #
-
+import pytz
 from conf.env import *
 
 # Quick-start development settings - unsuitable for production
@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "drf_yasg",
     "captcha",
     'channels',
+    'lkapp',
 ]
 
 MIDDLEWARE = [
