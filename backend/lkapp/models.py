@@ -4,16 +4,16 @@ from uuid import uuid4
 
 # Create your models here.
 class LkappModel(CoreModel):
-    server_web_port = models.IntegerField(verbose_name="web端口")
-    server_ssh_port = models.IntegerField(verbose_name="ssh端口")
-    lk_name = models.CharField(max_length=255, verbose_name="粮库名称")
-    city = models.CharField(max_length=255, verbose_name="城市")
-    lmt_username = models.CharField(max_length=255, verbose_name="流媒体账号")
-    lmt_password = models.CharField(max_length=255, verbose_name="流媒体密码")
-    serve_username = models.CharField(max_length=255, verbose_name="服务器账号")
-    server_password = models.CharField(max_length=255, verbose_name="服务器密码")
-    server_keygen = models.CharField(max_length=255, verbose_name="服务器公钥")
-    server_ip = models.CharField(max_length=255, verbose_name="服务器ip")
+    server_web_port = models.IntegerField(null=True,blank=True,verbose_name="web端口")
+    server_ssh_port = models.IntegerField(null=True,blank=True,verbose_name="ssh端口")
+    lk_name = models.CharField(null=True,blank=True,max_length=255, verbose_name="粮库名称")
+    city = models.CharField(null=True,blank=True,max_length=255, verbose_name="城市")
+    lmt_username = models.CharField(null=True,blank=True,max_length=255, verbose_name="流媒体账号")
+    lmt_password = models.CharField(null=True,blank=True,max_length=255, verbose_name="流媒体密码")
+    serve_username = models.CharField(null=True,blank=True,max_length=255, verbose_name="服务器账号")
+    server_password = models.CharField(null=True,blank=True,max_length=255, verbose_name="服务器密码")
+    server_keygen = models.CharField(null=True,blank=True,max_length=255, verbose_name="服务器公钥")
+    server_ip = models.CharField(null=True,blank=True,max_length=255, verbose_name="服务器ip")
 
 
     class Meta:

@@ -61,8 +61,27 @@ export const crudOptions = vm => {
         disabled: true
       }
     }, {
-      title: '商品',
-      key: 'server_ip',
+      title: '城市',
+      key: 'city',
+      sortable: true,
+      type: 'input',
+      form: {
+        rules: [
+          { required: false, message: '城市必填' }
+        ],
+        component: {
+          props: {
+            clearable: true
+          },
+          placeholder: '请输入所属城市'
+        },
+        itemProps: {
+          class: { yxtInput: true }
+        }
+      }
+    }, {
+      title: '粮库名称',
+      key: 'lk_name',
       sortable: true,
       treeNode: true,
 
@@ -71,44 +90,64 @@ export const crudOptions = vm => {
         editDisabled: true,
         rules: [
           // 表单校验规则
-          { required: false, message: '商品名称必填' }
+          { required: true, message: '粮库名称必填' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: '请输入商品'
+          placeholder: '请输入粮库名称'
         },
         itemProps: {
           class: { yxtInput: true }
         }
       }
     }, {
-      title: '库存量',
-      key: 'inventory',
+      title: 'web端口',
+      key: 'server_web_port',
       sortable: true,
       type: 'input',
       form: {
         editDisabled: true,
         rules: [
           // 表单校验规则
-          { required: false, message: '库存量必填' }
+          { required: true, message: 'web端口必填' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: '请输入库存量'
+          placeholder: '请输入web端口'
         },
         itemProps: {
           class: { yxtInput: true }
         }
       }
     }, {
-      title: '商品定价',
-      key: 'goods_price',
+      title: 'ssh端口',
+      key: 'server_ssh_port',
       sortable: true,
-
+      type: 'input',
+      form: {
+        editDisabled: true,
+        rules: [
+          // 表单校验规则
+          { required: true, message: 'ssh端口必填' }
+        ],
+        component: {
+          props: {
+            clearable: true
+          },
+          placeholder: '请输入ssh端口'
+        },
+        itemProps: {
+          class: { yxtInput: true }
+        }
+      }
+    }, {
+      title: '服务器ip',
+      key: 'server_ip',
+      sortable: true,
       search: {
         component: {
           props: {
@@ -116,19 +155,94 @@ export const crudOptions = vm => {
           }
         }
       },
-
       type: 'input',
       form: {
         editDisabled: true,
         rules: [
           // 表单校验规则
-          { required: false, message: '商品定价必填' }
+          { required: true, message: '服务器ip必填' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: '请输入商品定价'
+          placeholder: '请输入服务器ip'
+        },
+        itemProps: {
+          class: { yxtInput: true }
+        }
+      }
+    }, {
+      title: '流媒体账号',
+      key: 'lmt_username',
+      sortable: true,
+      type: 'input',
+      form: {
+        rules: [
+          { required: false, message: '流媒体账号必填' }
+        ],
+        component: {
+          props: {
+            clearable: true
+          },
+          placeholder: '请输入流媒体账号'
+        },
+        itemProps: {
+          class: { yxtInput: true }
+        }
+      }
+    }, {
+      title: '流媒体密码',
+      key: 'lmt_password',
+      sortable: true,
+      type: 'input',
+      form: {
+        rules: [
+          { required: false, message: '流媒体密码必填' }
+        ],
+        component: {
+          props: {
+            clearable: true
+          },
+          placeholder: '请输入流媒体密码'
+        },
+        itemProps: {
+          class: { yxtInput: true }
+        }
+      }
+    }, {
+      title: '服务器账号',
+      key: 'serve_username',
+      sortable: true,
+      type: 'input',
+      form: {
+        rules: [
+          { required: false, message: '服务器账号必填' }
+        ],
+        component: {
+          props: {
+            clearable: true
+          },
+          placeholder: '请输入服务器账号'
+        },
+        itemProps: {
+          class: { yxtInput: true }
+        }
+      }
+    }, {
+      title: '服务器密码',
+      key: 'server_password',
+      sortable: true,
+      type: 'input',
+      form: {
+        rules: [
+          { required: false, message: '服务器密码必填' }
+        ],
+        component: {
+          props: {
+            clearable: true
+          },
+          placeholder: '请输入服务器密码'
         },
         itemProps: {
           class: { yxtInput: true }
